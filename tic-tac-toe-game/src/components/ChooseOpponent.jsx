@@ -8,7 +8,7 @@ const ChooseOpponent = () => {
     const handleSelectOpponent = (selectedOpponent) => {
         setOpponent(selectedOpponent);
         navigate("/playarea");
-
+        localStorage.setItem("player2", selectedOpponent);
     };
 
     return (
@@ -17,21 +17,21 @@ const ChooseOpponent = () => {
                 <h2 className='mb-4 text-white'>Choose your opponent:</h2>
                 <div>
                     <button
-                        className={`${opponent === 'bot' ? ' bg-purple-900 text-white' : 'bg-purple-200 text-gray-800'
+                        className={`cursor-pointer ${opponent === 'bot' ? ' bg-purple-900 text-white' : 'bg-purple-200 text-gray-800'
                             } px-4 py-2 mr-2 rounded`}
                         onClick={() => handleSelectOpponent('bot')}
                     >
                         Bot
                     </button>
                     <button
-                        className={`${opponent === 'friend' ? ' bg-purple-900 text-white' : 'bg-purple-200 text-gray-800'
+                        className={`cursor-pointer ${opponent === 'friend' ? ' bg-purple-900 text-white' : 'bg-purple-200 text-gray-800'
                             } px-4 py-2 mr-2 rounded`}
                         onClick={() => handleSelectOpponent('friend')}
                     >
                         Friend
                     </button>
                     <button
-                        className={`${opponent === 'invite' ? ' bg-purple-900 text-white' : 'bg-purple-200 text-gray-800'
+                        className={`cursor-not-allowed ${opponent === 'invite' ? ' bg-purple-900 text-white' : 'bg-purple-200 text-gray-800'
                             } px-4 py-2 rounded`}
                         onClick={() => handleSelectOpponent('invite')}
                     >
