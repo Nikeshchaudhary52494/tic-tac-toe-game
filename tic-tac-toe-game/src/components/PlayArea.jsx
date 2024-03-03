@@ -47,7 +47,7 @@ const PlayArea = () => {
     }
 
     return (
-        <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-purple-800 to-pink-200">
+        <div className="min-h-screen flex justify-center items-center bg-gradient-to-br from-purple-800 to-pink-300">
             <div className='flex flex-col'>
                 {
                     !winner && (
